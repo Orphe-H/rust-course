@@ -1,6 +1,6 @@
-# Cours : Variables en Rust : let, mut, shadowing
+# Cours : Variables en Rust : `let`, `mut`, shadowing
 
-**1. let : déclarer une variable**
+**1. `let` : déclarer une variable**
 
 En Rust, on crée une variable avec `let` :
 
@@ -24,7 +24,7 @@ Rust déduit le type tout seul (ici `i32` pour `age` et `&str` pour `nom`), mais
 let age: u32 = 25;
 ```
 
-**2. mut : rendre une variable modifiable**
+**2. `mut` : rendre une variable modifiable**
 
 Pour autoriser la modification, on ajoute `mut` (pour mutable) :
 
@@ -35,7 +35,7 @@ compteur += 1;
 println!("{}", compteur); // 2
 ```
 
-Quand utiliser `mut` ? Seulement quand la valeur doit vraiment évoluer (compteur, accumulateur, structure qu’on remplit). Dans ton projet Env Doctor, tu en auras besoin pour une collection qu’on remplit ligne après ligne.
+Quand utiliser `mut` ? Seulement quand la valeur doit vraiment évoluer (compteur, accumulateur, structure qu’on remplit).
 
 Une limite importante : `mut` permet de **changer la valeur, pas le type**.
 
