@@ -14,7 +14,7 @@ fn main() {
 
     // part 3 : shadowing
     let saisie = " 42 ";
-    let saisie = str::trim(saisie);
+    let saisie = saisie.trim();
     let saisie: u32 = saisie.parse().expect("Ce n'est pas un nombre.");
     println!("saisies = {}", saisie + 1);
 
