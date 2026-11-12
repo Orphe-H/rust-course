@@ -1,5 +1,13 @@
 # rust-course
 Course to learn the Rust programming language
 
-01-fondation
-- variables
+# Chapters
+
+```text
+rust-course /
+├─ 01-foundation /
+|  └── variables
+|  └── types
+├─ 02- file-manipulation
+├─ 03- error-handling
+└── ...
