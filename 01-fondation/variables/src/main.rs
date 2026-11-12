@@ -1,8 +1,8 @@
 fn main() {
     // part 1 : immutabilité
-    let ville = "Cotonou";
-    // ville = "Porto-Novo";
-    let ville2 = "Porto-Novo";
+    let mut ville = "Cotonou";
+    ville = "Porto-Novo";
+    println!("ville = {}", ville);
 
     // part 2 : mut
     let mut tentatives = 0;
@@ -29,5 +29,5 @@ fn main() {
 }
 
 // Q1 : parce qu'on veut changer le type de saisie en passant d'un string à un entier.
-// Q2 : dans le cas où je veux garder le même type tout en modifier le contenu d'une variable et surtout 
+// Q2 : dans le cas où je veux garder le même type tout en modifier le contenu d'une variable et surtout
 // parce que le shadowing ne survit pas à une bouble
