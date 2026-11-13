@@ -1,7 +1,7 @@
 fn main() {
     // part 1: bool
-    let fichier_existe = true;
-    let valeur_vide = false;
+    let fichier_existe: bool = true;
+    let valeur_vide: bool = false;
 
     println!("10 > 5 : {}", 10 > 5);
     println!("3 == 4 : {}", 3 == 4);
@@ -35,28 +35,28 @@ fn main() {
     println!("somme = {}", somme);
 
     // part 3 : &str et string
-    let str = "postgres://localhost";
-    let mut converted_str = str.to_string();
-    converted_str.push_str(":5432");
+    let url = "postgres://localhost";
+    let mut converted_url = url.to_string();
+    converted_url.push_str(":5432");
 
-    println!("converted str = {}", converted_str);
+    println!("converted str = {}", converted_url);
 
-    // str.push_str(":5432");
+    // url.push_str(":5432");
     /* l'erreur dit : error[E0599]: no method named `push_str` found for reference `&str` in the current scope
       --> src/main.rs:44:9
        |
     44 |     str.push_str(":5432");
        |         ^^^^^^^^ method not found in `&str` */
 
-    let from_string: &str = &converted_str;
-    println!("from String = {}", from_string);
+    let url_to_string: &str = &converted_url;
+    println!("url_to_string = {}", url_to_string);
 
     // part 4 : minis-cas
     let ligne = "DATABASE_URL=";
 
     println!("la longueur de ligne est {}", ligne.len());
 
-    let ligne_contient_symbole = ligne.contains("=");
+    let ligne_contient_symbole: bool = ligne.contains("=");
 
     if ligne_contient_symbole {
         println!("Ligne contient =");
@@ -73,6 +73,6 @@ fn main() {
 }
 
 // Q1 : "Bobby" est un &str parce qu'il est emprunter et stocker de façon optimale parce qu'on ne va pas modifier sa valeur.
-// Q2 : .len() retourne un usize plutôt qu'un i32 parce que le usize peut contenir des valeurs très grandes et forcément 
-// non signés car elle contient la longueur de strucutre qui peuvent être vide ou contenir un peu ou énormément d'éléments. 
+// Q2 : .len() retourne un usize plutôt qu'un i32 parce que le usize peut contenir des valeurs très grandes et forcément
+// non signés car elle contient la longueur de strucutre qui peuvent être vide ou contenir un peu ou énormément d'éléments.
 // Q3 : j'ai besoin d'un String plutôt qu'un &str quand je dois modifier la valeur de la variable.
