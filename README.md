@@ -8,6 +8,7 @@ rust-course /
 ├─ 01-foundation /
 |  └── variables
 |  └── types
-├─ 02- file-manipulation
-├─ 03- error-handling
+|  └── functions
+├─ 02-file-manipulation
+├─ 03-error-handling
 └── ...
